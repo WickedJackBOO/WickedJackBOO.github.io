@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update in Progress</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-weight: normal;
-        }
-
-        .countdown {
-            font-size: 2.5em;
-            margin-top: 15px;
-            color: #58a6ff;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <title>NanoVerse</title>
+    <link rel="stylesheet" href="styleCoolTechB.css" />
+    <script defer src="naniteBackgroundWAN.js"></script>
 </head>
+
 <body>
-    <h1>Update in progress, please come back later.</h1>
-    <div class="countdown" id="countdown"></div>
+    <canvas id="naniteCanvas"></canvas>
+
+    <div class="mainContainer">
+        <h1>Welcome to the NanoVerse</h1>
+        <div class="infoBox">
+            <p>Nanotechnology isn't just the future — it's here. Explore how nanites can repair your body, shape your environment, and even build the future atom by atom.</p>
+            <p>This interactive site introduces you to the world of nanites: what they are, how they're used today, and what amazing things they may do tomorrow.</p>
+        </div>
+        <nav class="navMenu">
+            <a href="whatAreNanites.html">What Are Nanites?</a>
+            <a href="realWorldApplications.html">Real-World Applications</a>
+            <a href="futureOfNanites.html">The Future of Nanites</a>
+        </nav>
+    </div>
+
+    <div id="helpButton">?</div>
+    <div id="helpMenu" class="hidden">
+        <label><input type="checkbox" id="toggleText" checked /> Show all text</label>
+        <p><strong>Navigation:</strong></p>
+        <ul>
+            <li>Use the menu above to explore Nanite tech</li>
+            <li>This site features animations and interactivity</li>
+            <li>Click into each section to learn more!</li>
+        </ul>
+    </div>
+
+    <footer class="footerBox">
+        <div class="footerContainer">
+            <p>All made from scratch (the internet helped alot) Have Fun</p>
+        </div>
+    </footer>
 
     <script>
-        function updateCountdown() {
-            const now = new Date();
-            const tomorrow8am = new Date(now);
-
-            tomorrow8am.setHours(8, 0, 0, 0);
-            if (now >= tomorrow8am) {
-                tomorrow8am.setDate(tomorrow8am.getDate() + 1);
-            }
-
-            const diff = tomorrow8am - now;
-
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('countdown').textContent =
-                `${hours}h ${minutes}m ${seconds}s`;
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        const helpBtn = document.getElementById("helpButton");
+        const helpMenu = document.getElementById("helpMenu");
+        const toggleText = document.getElementById("toggleText");
+        const textElements = [
+            document.querySelector("h1"),
+            document.querySelector(".infoBox"),
+            document.querySelector(".navMenu"),
+            document.querySelector(".footerBox")
+        ];
+        helpBtn.addEventListener("click", () => {
+            helpMenu.classList.toggle("hidden");
+        });
+        toggleText.addEventListener("change", () => {
+            textElements.forEach((el) => {
+                if (el) el.style.display = toggleText.checked ? "" : "none";
+            });
+        });
     </script>
 </body>
 </html>

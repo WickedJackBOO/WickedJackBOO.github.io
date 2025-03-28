@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>What Are Nanites</title>
+    <link rel="stylesheet" href="styleCoolTechB.css" />
+    <script defer src="naniteBackgroundWAN.js"></script>
+</head>
+<div id="helpButton">?</div>
+<div id="helpMenu" class="hidden">
+    <p><strong>Nanite Page Guide</strong></p>
+    <label><input type="checkbox" id="toggleText" checked> Show all text</label>
+    <p>This is how the nanites work on this page: they react to your mouse movements and clicks—left click attracts them, right click repels them, and hovering gently nudges them away.</p>
+</div>
+<body>
+    <canvas id="naniteCanvas"></canvas>
+    <div class="mainContainer">
+        <h1>WhatAreNanites</h1>
+        <div class="infoBox">
+            <h2>What Are Nanites?</h2>
+            <div class="imageBox">
+                <img src="Nanorobots.jpg" alt="Nanorobots flowing through bloodstream">
+                <p class="imgCaption">Visualization of medical nanorobots navigating through the bloodstream.</p>
+            </div>
+            <p><strong>Nanites</strong>, also called <strong>nanobots</strong> or <strong>nanorobots</strong>, are very tiny robots. They are so small you'd need a powerful microscope just to see them. How small exactly? Well, "<strong>nano</strong>" means one billionth, so a <strong>nanometer</strong> is one billionth of a meter. Imagine something <strong>thousands of times thinner than a human hair</strong>, and that's how tiny they are!</p>
+            <p>These tiny machines often appear in science fiction stories. Examples you might know include the nanotech suits from <em>Avengers: Endgame</em>, the building nanites from <em>Transcendence</em>, and the healing nanobots from <em>Bloodshot</em>. They are usually imagined as being made from <strong>atoms and molecules</strong>, or even biological parts like proteins or DNA. This allows them to build things and perform tasks at a very small level. This makes them not just <strong>really small</strong>, but also <strong>very powerful</strong>.</p>
+            <p>Right now, <strong>real-world robots</strong> can't do the amazing things nanites do in movies, mainly because building something this small is incredibly hard. Scientists have made progress with simpler versions, such as nano-sized motors and tiny robots built from DNA for medicine, but truly free-roaming nanites are still experimental.</p>
+            <p>If nanites ever become real, they could do jobs bigger robots can't. For example, they might work <strong>inside our bodies</strong>, giving medicine exactly where it's needed, fixing damaged cells, or clearing blocked areas. They could also work with <strong>special materials</strong> or inside <strong>tiny electronics</strong>.</p>
+            <p>Want to know more?</p>
+            <p>
+                Check out the next page about 
+                <a href="realWorldApplications.html" class="inlineLink">
+                    Real-World Applications of Nanites
+                </a>.
+            </p>
+            
+        </div>
+        <div class="navMenu">
+            <a href="index.html">Back To Nano Verse</a>
+        </div>
+    </div>
+    <footer class="footerBox">
+        <div class="footerContainer">
+            <h3>References & Further Reading</h3>
+            <div class="footerLinks">
+                <a href="https://blog.seas.upenn.edu/james-pikul-and-marc-miskin-on-iron-man-s-nanotech-suit-70929fa5158/" target="_blank">
+                    Iron Man’s Nanotech Suit
+                </a>
+                <a href="https://materialneutral.info/en/safety/cross-cutting/nanobots-reality-or-fiction/" target="_blank">
+                    Nanobots: Reality or Fiction?
+                </a>
+                <a href="https://builtin.com/robotics/nanorobotics" target="_blank">
+                    What is Nanorobotics?
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const helpBtn = document.getElementById('helpButton');
+    const helpMenu = document.getElementById('helpMenu');
+    const toggleText = document.getElementById('toggleText');
+    const textElements = [
+        document.querySelector('h1'),
+        document.querySelector('.infoBox'),
+        document.querySelector('footer'),
+        document.querySelector('.navMenu')
+    ];
+    helpBtn.addEventListener('click', () => {
+        helpMenu.classList.toggle('hidden');
+    });
+    toggleText.addEventListener('change', () => {
+        textElements.forEach(el => {
+            el.style.display = toggleText.checked ? '' : 'none';
+        });
+    });
+</script>
+
+</html>

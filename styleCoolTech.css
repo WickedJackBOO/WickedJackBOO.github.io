@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+body {
+    background: radial-gradient(circle at center, #0a0a0a, #000);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cce7f0;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.mainContainer {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5em;
+    color: #00f7ff;
+    text-shadow: 0 0 5px #00f7ff, 0 0 2px #00e0ff;
+}
+
+h2 {
+    font-size: 2em;
+    color: #7afcff;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin: 15px 0;
+    text-align: left;
+}
+
+a {
+    color: #84ffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navMenu {
+    margin: 40px 0;
+}
+
+.navMenu a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #7afcff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.navMenu a:hover {
+    color: #ff6fff;
+    text-shadow: 0 0 5px #ff6fff;
+}
+
+canvas {
+    background: transparent;
+    display: block;
+}
+
+#naniteCanvas {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.infoBox {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.2);
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1.15em;
+    line-height: 1.6;
+}
+
+.inlineLink {
+    font-weight: bold;
+    color: #00f7ff;
+    text-decoration: none;
+    border-bottom: 1px dashed #00f7ff;
+    transition: all 0.3s ease;
+}
+
+.inlineLink:hover {
+    color: #ff6fff;
+    border-color: #ff6fff;
+    text-shadow: 0 0 5px #ff6fff;
+}
+
+.footerBox {
+    margin-top: 60px;
+    padding: 30px 20px;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #cce7f0;
+}
+
+.footerBox h3 {
+    font-size: 1.2em;
+    color: #7afcff;
+    margin-bottom: 20px;
+}
+
+.footerContainer {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 247, 255, 0.15);
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+}
+
+.footerLinks a {
+    color: #84ffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.footerLinks a:hover {
+    color: #ff6fff;
+    text-shadow: 0 0 5px #ff6fff;
+}
+.imageBox {
+    text-align: center;
+    margin: 40px auto 20px;
+    user-select: none;
+}
+
+.imageBox img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 247, 255, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.imageBox img:hover {
+    transform: scale(1.02);
+}
+
+.imgCaption {
+    font-size: 0.95em;
+    color: #9beaf5;
+    margin-top: 10px;
+    font-style: italic;
+}

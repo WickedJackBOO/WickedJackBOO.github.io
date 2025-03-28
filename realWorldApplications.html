@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real World Applications</title>
+    <link rel="stylesheet" href="styleCoolTechG.css">
+    <script defer src="naniteBackgroundRWA.js"></script>
+</head>
+<div id="helpButton">?</div>
+<div id="helpMenu" class="hidden">
+    <label><input type="checkbox" id="toggleText" checked> Show all text</label>
+    <p><strong>Controls:</strong></p>
+    <ul>
+        <li><strong>Click</strong> – Spawn a normal blob</li>
+        <li><strong>Shift + Click</strong> – Spawn a mega blob (requires 10 nanites)</li>
+        <li><strong>Click + Drag</strong> – Leave a trail of blobs behind</li>
+    </ul>
+    <p><strong>Nanite Behavior:</strong></p>
+    <ul>
+        <li>Nanites patrol around the screen by default</li>
+        <li>They detect blobs within 500px range</li>
+        <li>Only 5 nanites are assigned to each normal blob (10 for mega blobs)</li>
+        <li>Blob only fades when all assigned nanites touch it</li>
+    </ul>
+</div>
+
+
+<body>
+    <canvas id="naniteCanvas"></canvas>
+
+    <div class="mainContainer">
+        <h1>Real-World Applications of Nanites</h1>
+        <div class="infoBox">
+            <p><strong>Nanotechnology</strong> (including nanites) is already at work in the real world in very surprising ways. Let's explore how nano tech is used in medicine, manufacturing, and even environmental cleanup! Many of these ideas were once science fiction, but now they're becoming reality.</p>
+            <h2>Nanites in Medicine: Tiny Doctors</h2>
+            <p>Nanomedicine is an exciting field where nanites could act like tiny doctors within the body. Imagine these tiny robots working together to deliver medicine directly where it's needed, such as precisely targeting a tumor and shrinking it, a technique already successfully tested with DNA-based nanorobots in mice. Beyond treatment, nanites might also help detect diseases earlier than ever before. Researchers are developing tiny biosensors that can travel through the bloodstream, continuously scanning for early signs of illnesses like cancer. This could mean faster diagnoses, less invasive treatments, and ultimately, healthier lives.</p>
+            <h2>Regenerative Medicine: Living Nanites</h2>
+            <div class="imageBox">
+                <img src="xenobots.png" alt="Xenobots">
+                <p class="imgCaption">Microscopic living nanites (xenobots)</p>
+            </div>
+            <p>Scientists are developing bio-organic robots called xenobots, which are nanites made from living cells. These microscopic robots could someday help repair damaged tissues or clear debris from injuries. Researchers have even seen the xenobots self-reproducing under laboratory conditions!</p>
+            <h2>Nanotechnology in Manufacturing and Materials</h2>
+            <div class="imageBox">
+                <img src="carbon-nanotubes1.jpg" alt="Carbon nanotubes">
+                <p class="imgCaption">Carbon nanotubes – extremely strong, ultra-light nano materials.</p>
+            </div>
+            <p>Nanotechnology also helps us create better, stronger, and lighter materials. One example is carbon nanotubes, which are incredibly small tubes made from carbon atoms. These nanotubes are extremely strong—far stronger than steel—yet remain lightweight, making them ideal for manufacturing various products. They are currently being used in items such as sports equipment, airplane parts, and car components. This improves their performance and durability, showing how versatile and beneficial nanotechnology can be in manufacturing.</p>
+            <h2>Electronics and Computing: Nano Circuits</h2>
+            <p>Yet another area impacted by nanotechnology is electronics and computing. Every modern computer or smartphone relies on incredibly small circuits created through nano-scale manufacturing. These microscopic circuits allow your devices to become faster, more powerful, and capable of handling complex tasks effortlessly. Without the advancements made possible by nanotech, the compact and efficient electronics we use every day simply wouldn't be possible.</p>
+            <h2>Smart Materials: Self-Building Structures</h2>
+            <div class="imageBox">
+                <img src="Self-Building Structures.jpg" alt="a Self-Building Structures">
+                <p class="imgCaption">Smart materials that fold themselves into complex shapes.</p>
+            </div>
+            <p>Another fascinating innovation is <strong>smart materials that self-assemble</strong>. Scientists are using special materials like DNA origami, which naturally arrange themselves into precise structures without needing direct human control. This could open the door to creating materials that can automatically repair damage or even construct complicated devices all on their own!</p>
+            <h2>Environmental Applications: A Cleaner World</h2>
+            <p>Nanotechnology also helps keep our environment clean in some ways. For example, nanoscale particles are already used to treat industrial pollution and clean up oil spills. These particles effectively react with pollutants, making contaminated water and soil safe again.</p>
+            <p><strong>Air Filtration:</strong> Nanotechnology is also making air cleaner. Advanced filters embedded with nanoscale fibers or special coatings can capture harmful pollutants and even break down bacteria and viruses, creating safer and healthier air.</p>
+            <p>These examples show how today's nanotech benefits us, but powerful technologies also carry risks</p>
+            <p>learn more on the <a class="inlineLink" href="futureOfNanites.html">Future of Nanites</a> page.</p>
+        </div>
+        <div class="backWrap">
+            <a class="backLink" href="index.html">Back to NanoVerse</a>
+        </div>
+    </div>
+    <div id="infoPopup" class="infoPopup"></div>
+    <div class="footerBox">
+        <h3>References</h3>
+        <div class="footerContainer">
+            <ul class="footerLinks">
+                <li><a href="https://news.asu.edu/20180212-discoveries-cancer-fighting-nanorobots-seek-and-destroy-tumors" target="_blank">ASU News (2018) – Cancer-Fighting Nanorobots</a></li>
+                <li><a href="https://doi.org/10.3389/fenvs.2021.793765" target="_blank">Del Prado-Audelo et al. (2021) – Nanoremediation</a></li>
+                <li><a href="https://www.techtimes.com/articles/167614/20160629/scientists-invent-3d-printed-micro-camera-that-can-be-injected-in-the-body-to-minimize-invasiveness.htm" target="_blank">TechTimes (2016) – 3D-Printed Micro Camera</a></li>
+                <li><a href="https://www.colorado.edu/engineering/2021/06/28/research-shows-how-nanorobots-may-clean-contaminated-soil-improve-water-filtration" target="_blank">CU Boulder (2021) – Nanorobots for Soil & Water</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    const helpBtn = document.getElementById('helpButton');
+    const helpMenu = document.getElementById('helpMenu');
+    const toggleText = document.getElementById('toggleText');
+    const textElements = [
+        document.querySelector('h1'),
+        document.querySelector('.infoBox'),
+        document.querySelector('footer'),
+        document.querySelector('.navMenu'),
+        document.querySelector('.backLink')
+    ];
+
+    helpBtn.addEventListener('click', () => {
+        helpMenu.classList.toggle('hidden');
+    });
+
+    toggleText.addEventListener('change', () => {
+        textElements.forEach(el => {
+            if (el) el.style.display = toggleText.checked ? '' : 'none';
+        });
+    });
+</script>
+
+</html>
