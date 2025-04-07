@@ -30,6 +30,14 @@
 
     <div class="mainContainer">
         <h1>Real-World Applications of Nanites</h1>
+
+        <nav class="navMenu">
+            <a href="index.html">Home</a>
+            <a href="whatAreNanites.html">What Are Nanites?</a>
+            <a href="realWorldApplications.html">Real-World Applications</a>
+            <a href="futureOfNanites.html">Future of Nanites</a>
+        </nav>
+
         <div class="infoBox">
             <p><strong>Nanotechnology</strong> (including nanites) is already at work in the real world in very surprising ways. Let's explore how nano tech is used in medicine, manufacturing, and even environmental cleanup! Many of these ideas were once science fiction, but now they're becoming reality.</p>
             <h2>Nanites in Medicine: Tiny Doctors</h2>
@@ -60,19 +68,16 @@
             <p>These examples show how today's nanotech benefits us, but powerful technologies also carry risks</p>
             <p>learn more on the <a class="inlineLink" href="futureOfNanites.html">Future of Nanites</a> page.</p>
         </div>
-        <div class="backWrap">
-            <a class="backLink" href="index.html">Back to NanoVerse</a>
-        </div>
     </div>
     <div id="infoPopup" class="infoPopup"></div>
     <div class="footerBox">
         <h3>References</h3>
         <div class="footerContainer">
             <ul class="footerLinks">
-                <li><a href="https://news.asu.edu/20180212-discoveries-cancer-fighting-nanorobots-seek-and-destroy-tumors" target="_blank">ASU News (2018) – Cancer-Fighting Nanorobots</a></li>
-                <li><a href="https://doi.org/10.3389/fenvs.2021.793765" target="_blank">Del Prado-Audelo et al. (2021) – Nanoremediation</a></li>
-                <li><a href="https://www.techtimes.com/articles/167614/20160629/scientists-invent-3d-printed-micro-camera-that-can-be-injected-in-the-body-to-minimize-invasiveness.htm" target="_blank">TechTimes (2016) – 3D-Printed Micro Camera</a></li>
-                <li><a href="https://www.colorado.edu/engineering/2021/06/28/research-shows-how-nanorobots-may-clean-contaminated-soil-improve-water-filtration" target="_blank">CU Boulder (2021) – Nanorobots for Soil & Water</a></li>
+                <li><a href="https://news.asu.edu/20180212-discoveries-cancer-fighting-nanorobots-seek-and-destroy-tumors" target="_blank">Cancer-fighting nanorobots seek and destroy tumors | ASU News. (2018, February 12).</li>
+                <li><a href="https://doi.org/10.3389/fenvs.2021.793765" target="_blank">Nanoremediation: nanomaterials and nanotechnologies for environmental cleanup. Frontiers in Environmental Science, 9. (2021)</li>
+                <!-- <li><a href="https://www.techtimes.com/articles/167614/20160629/scientists-invent-3d-printed-micro-camera-that-can-be-injected-in-the-body-to-minimize-invasiveness.htm" target="_blank">Passary, A. (2016, June 29). Scientists invent 3D-Printed micro camera that can be injected in the body to minimize invasiveness. Tech Times.</li> -->
+                <li><a href="https://www.colorado.edu/engineering/2021/06/28/research-shows-how-nanorobots-may-clean-contaminated-soil-improve-water-filtration" target="_blank">Research shows how nanorobots may clean up contaminated soil, improve water filtration. (2021, June 28). College of Engineering & Applied Science. </a></li>
             </ul>
         </div>
     </div>
@@ -84,10 +89,11 @@
     const textElements = [
         document.querySelector('h1'),
         document.querySelector('.infoBox'),
-        document.querySelector('footer'),
+        document.querySelector('.footerBox'),
         document.querySelector('.navMenu'),
         document.querySelector('.backLink')
     ];
+
 
     helpBtn.addEventListener('click', () => {
         helpMenu.classList.toggle('hidden');

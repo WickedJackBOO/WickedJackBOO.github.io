@@ -142,8 +142,9 @@ function attachTextToggle() {
     const textElements = [
         document.querySelector('h1'),
         document.querySelector('.infoBox'),
-        document.querySelector('.navMenu')
-    ];
+        document.querySelector('.navMenu'),
+        document.querySelector('.footerBox')
+    ];    
     toggle.addEventListener('change', () => {
         textElements.forEach(el => {
             if (el) el.style.display = toggle.checked ? '' : 'none';
